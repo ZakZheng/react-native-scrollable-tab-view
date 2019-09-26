@@ -117,10 +117,10 @@ const ScrollableTabBar = createReactClass({
       const newLineRight = (pageOffset * nextTabRight + (1 - pageOffset) * lineRight);
 
       this.state._leftTabUnderline.setValue(newLineLeft);
-      this.state._widthTabUnderline.setValue(newLineRight - newLineLeft);
+      this.state._widthTabUnderline.setValue((newLineRight - newLineLeft) / 3);
     } else {
       this.state._leftTabUnderline.setValue(lineLeft);
-      this.state._widthTabUnderline.setValue(lineRight - lineLeft);
+      this.state._widthTabUnderline.setValue((lineRight - lineLeft) / 3);
     }
   },
 
